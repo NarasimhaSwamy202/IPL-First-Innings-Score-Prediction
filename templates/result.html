@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-image: url('{{ url_for('static', filename='IPL-2024.jpg') }}');
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-family: 'Open Sans', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>First Innings Score Predictor for </span><span class="heading_second">Indian Premier League (IPL)</span></h2>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+            <!-- Result -->
+            <div class="results">
+                <p class='result-p'>The final predicted score (range): <span class="score-range">{{ lower_limit }} to {{ upper_limit }}</span></p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/NarasimhaSwamy202"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/narasimha-swamy-s-r-43b05a24b/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+           <p class='footer-description'>Crafted with ❤️ by Narasimha Swamy S R.</p>
+            
+       </div>
+
+    </body>
+</html>

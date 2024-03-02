@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Innings Score Predictor</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='ipl1.jpg') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Website Title -->
+    <div class="container">
+        <h2 class='container-heading'><span class='heading_first'>First Innings Score Predictor for </span><span
+                class="heading_second">Indian Premier League (IPL)</span></h2>
+    </div>
+
+    <!-- Prediction Area -->
+    <div class="prediction-area">
+        <script>
+            function validateTeams() {
+                var battingTeam = document.getElementById("batting-team").value;
+                var bowlingTeam = document.getElementById("bowling-team").value;
+
+                if (battingTeam === bowlingTeam) {
+                    alert("Batting and bowling teams should be different");
+                    return false; // Prevent form submission
+                }
+
+                return true; // Allow form submission
+            }
+        </script>
+
+        <!-- Prediction Form --> 
+        <div class='div2'>
+            <form action="{{ url_for('predict') }}" method="POST" onsubmit="return validateTeams();">
+                <!-- Batting Team Dropdown -->
+                <select class="form-input align-center" name="batting-team" id="batting-team">
+                    <option value="none">--- Select a Batting team ---</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select><br>
+                <!-- Bowling Team Dropdown -->
+                <select class="form-input align-center" name="bowling-team" id="bowling-team">
+                    <option value="none">--- Select a Bowling team ---</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select><br>
+                <input class="form-input" type="number" name="overs" placeholder="Overs (>= 5.0) eg. 7.2" min="5" max="19"><br>
+                <input class="form-input" type="number" name="runs" placeholder="Runs eg. 64" min="0" max="720"><br>
+                <input class="form-input" type="number" name="wickets" placeholder="Wickets eg. 4" min="0" max="9"><br>
+                <input class="form-input" type="number" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42" min="0" max="180"><br>
+                <input class="form-input" type="number" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3" min="0" max="9"><br>
+                <input type="submit" class="myButton" value="Predict Score">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/NarasimhaSwamy202"><i
+                    class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/narasimha-swamy-s-r-43b05a24b/"><i
+                    class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+        <p class='footer-description'>Crafted with ❤️ by Narasimha Swamy S R.</p>
+    </div>
+
+</body>
+</html>
