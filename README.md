@@ -1,6 +1,6 @@
 # IPL First Innings Score Prediction 
 
-![IPL-captains]([text](static/ipl_group.avif))
+![IPL-captains](D:\Desktop\Project\IPL-First-Innings-Score-Prediction\static\IPL.jpg)
 
 ## Overview
 
