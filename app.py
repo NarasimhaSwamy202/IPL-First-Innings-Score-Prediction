@@ -2,7 +2,6 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
-import os
 
 # Load the Random Forest CLassifier model
 filename = 'ipl_model.pkl'
@@ -72,5 +71,5 @@ def predict():
 
 
 
-if __name__ == "__main__":
-    app.run(port=int(os.environ.get("PORT", 5000)))
+if __name__ == '__main__':
+	app.run(debug=True)
