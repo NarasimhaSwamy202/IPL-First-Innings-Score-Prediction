@@ -4,7 +4,7 @@
 
 ## Overview
 
-Introducing the Inaugural Innings Score Prediction IPL Project! Employing machine learning, this initiative forecasts the first innings score in cricket matches by leveraging diverse input parameters. The predictive model is coded in Python, with Jupyter Notebook as the primary development tool. Additionally, HTML, CSS, Flask, and Render are integral components for crafting an intuitive web interface to enhance user experience.
+Introducing the Inaugural Innings Score Prediction IPL Project! Employing machine learning, this initiative forecasts the first innings score in cricket matches by leveraging diverse input parameters. The predictive model is coded in Python, with Jupyter Notebook as the primary development tool. Additionally, HTML, CSS and Flask are integral components for crafting an intuitive web interface to enhance user experience.
 
 ## Prerequisites
 
@@ -15,7 +15,6 @@ Before getting started, make sure you have the following tools and technologies 
 - HTML
 - CSS
 - Flask
-- Render
 - Visual Studio Code
 
 ## Project Structure
@@ -36,9 +35,6 @@ The project is organized as follows:
 1. Select the batting and bowling teams.
 2. Enter the number of overs, runs, wickets, runs_in_prev_5, and wickets_in_prev_5 as input parameters.
 3. Click on the "Predict" button to get the predicted first innings score.
-
-## Deployment (Render)
-The project is ready for deployment on Render. Follow the Heroku deployment guidelines to deploy the web application.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
